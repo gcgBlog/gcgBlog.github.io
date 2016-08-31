@@ -1,1 +1,1 @@
-这是gcg的Blog
+这是gcg的Blog gcgblog.github.io
