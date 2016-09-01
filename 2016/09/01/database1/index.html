@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="测试," />
+  <meta name="keywords" content="plsql," />
 
 
 
@@ -84,22 +84,16 @@
 
 
 
-<meta name="description" content="Test
-hello
-world">
+<meta name="description" content="PLSQL中文乱码的问题具体场景在plsql中执行数据库脚本，中文的字段值入库后乱码。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="test">
-<meta property="og:url" content="http://yoursite.com/2016/09/01/test/index.html">
+<meta property="og:title" content="PLSQL中文乱码">
+<meta property="og:url" content="http://yoursite.com/2016/09/01/database1/index.html">
 <meta property="og:site_name" content="郭长庚">
-<meta property="og:description" content="Test
-hello
-world">
-<meta property="og:updated_time" content="2016-09-01T10:47:40.526Z">
+<meta property="og:description" content="PLSQL中文乱码的问题具体场景在plsql中执行数据库脚本，中文的字段值入库后乱码。">
+<meta property="og:updated_time" content="2016-09-01T12:28:17.940Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="test">
-<meta name="twitter:description" content="Test
-hello
-world">
+<meta name="twitter:title" content="PLSQL中文乱码">
+<meta name="twitter:description" content="PLSQL中文乱码的问题具体场景在plsql中执行数据库脚本，中文的字段值入库后乱码。">
 
 
 
@@ -120,9 +114,9 @@ world">
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/09/01/test/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/09/01/database1/"/>
 
-  <title> test | 郭长庚 </title>
+  <title> PLSQL中文乱码 | 郭长庚 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="">
@@ -242,7 +236,7 @@ world">
             
             
               
-                test
+                PLSQL中文乱码
               
             
           </h1>
@@ -254,7 +248,7 @@ world">
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Veröffentlicht am</span>
-            <time itemprop="dateCreated" datetime="2016-09-01T11:23:44+08:00" content="2016-09-01">
+            <time itemprop="dateCreated" datetime="2016-09-01T20:12:43+08:00" content="2016-09-01">
               2016-09-01
             </time>
           </span>
@@ -282,15 +276,9 @@ world">
       
 
       
-        <h1 id="Test"><a href="#Test" class="headerlink" title="Test"></a>Test</h1><ul>
-<li>hello</li>
-<li>world</li>
-</ul>
-<a id="more"></a>
-<p>Hello World  </p>
-<pre><code class="java"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">hello</span> </span>{
-}
-</code></pre>
+        <h1 id="PLSQL中文乱码的问题"><a href="#PLSQL中文乱码的问题" class="headerlink" title="PLSQL中文乱码的问题"></a>PLSQL中文乱码的问题</h1><h3 id="具体场景"><a href="#具体场景" class="headerlink" title="具体场景"></a>具体场景</h3><p>在plsql中执行数据库脚本，中文的字段值入库后乱码。<br><a id="more"></a></p>
+<h3 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h3><p>因为数据库的编号格式和pl /sql developer的编码格式不统一造成的。</p>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>在windows中创 建一个名为“NLS_LANG”的系统环境变量，设置其值为“SIMPLIFIED CHINESE_CHINA.ZHS16GBK”，<br>然后重新启动 pl/sql developer，这样检索出来的中文内容就不会是乱码了。<br>如果想转换为UTF8字符集，可以赋予“NLS_LANG”为 “AMERICAN_AMERICA.UTF8”，然后重新启动 pl/sql developer。<br>其它字符集设置同上。</p>
 
       
     </div>
@@ -313,7 +301,7 @@ world">
       
         <div class="post-tags">
           
-            <a href="/tags/测试/" rel="tag">#测试</a>
+            <a href="/tags/plsql/" rel="tag">#plsql</a>
           
         </div>
       
@@ -322,8 +310,8 @@ world">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/09/01/hello/" rel="next" title="郭长庚">
-                <i class="fa fa-chevron-left"></i> 郭长庚
+              <a href="/2016/09/01/hello/" rel="next" title="TEST">
+                <i class="fa fa-chevron-left"></i> TEST
               </a>
             
           </div>
@@ -455,7 +443,7 @@ world">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Test"><span class="nav-number">1.</span> <span class="nav-text">Test</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#PLSQL中文乱码的问题"><span class="nav-number">1.</span> <span class="nav-text">PLSQL中文乱码的问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#具体场景"><span class="nav-number">1.0.1.</span> <span class="nav-text">具体场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题原因"><span class="nav-number">1.0.2.</span> <span class="nav-text">问题原因</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决办法"><span class="nav-number">1.0.3.</span> <span class="nav-text">解决办法</span></a></li></ol></li></ol></li></ol></div>
             
           </div>
         </section>
