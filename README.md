@@ -1,1 +1,1 @@
-# 这是gcg的Blog https://gcgblog.github.io/
+这是gcg的Blog https: [gcgBlog](https://github.com/gcgBlog/gcgBlog.github.io)
