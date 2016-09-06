@@ -92,7 +92,7 @@
 <meta property="og:site_name" content="郭长庚">
 <meta property="og:description" content="抽象方法：在类中没有方法体的方法，就是抽象方法。抽象类：含有抽象方法的类就叫抽象类。
 抽象类中的抽象方法必须被实现！如果一个子类没有实现父类中的抽象方法，则子类也成为了一个抽象类！抽象类中的普通方法，可以不必实现。">
-<meta property="og:updated_time" content="2016-09-06T06:43:26.282Z">
+<meta property="og:updated_time" content="2016-09-06T06:54:17.512Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java中的抽象类和抽象方法">
 <meta name="twitter:description" content="抽象方法：在类中没有方法体的方法，就是抽象方法。抽象类：含有抽象方法的类就叫抽象类。
@@ -109,7 +109,7 @@
     motion: true,
     duoshuo: {
       userId: 0,
-      author: 'Penulis'
+      author: 'Author'
     }
   };
 </script>
@@ -177,7 +177,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Beranda
+            Home
           </a>
         </li>
       
@@ -187,7 +187,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Arsip
+            Archives
           </a>
         </li>
       
@@ -250,7 +250,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Diposting di</span>
+            <span class="post-meta-item-text">Posted on</span>
             <time itemprop="dateCreated" datetime="2016-09-06T14:25:28+08:00" content="2016-09-06">
               2016-09-06
             </time>
@@ -291,11 +291,14 @@
 </li>
 <li><p>抽象方法只需声明，而不需实现某些功能。如:</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">enjoy</span><span class="params">()</span></span>;</div></pre></td></tr></table></figure>
+<p> 上面的这个抽象方法不需要实现功能，而一般的方法 ：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">enjoy</span><span class="params">()</span> </span>&#123;</div><div class="line">System.out.print(<span class="string">"叫声"</span>); <span class="comment">//有必要实现某些功能</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p> 例子 ：多态程序，没抽象类的</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">f</span><span class="params">()</span> </span>&#123;</div><div class="line">System.out.println(<span class="string">"父类"</span>);</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Students</span> <span class="keyword">extends</span> <span class="title">Person</span> </span>&#123;</div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">f</span><span class="params">()</span> </span>&#123;</div><div class="line">System.out.println(<span class="string">"学生类"</span>);</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Teacher</span> <span class="keyword">extends</span> <span class="title">Person</span> </span>&#123;</div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">f</span><span class="params">()</span> </span>&#123;</div><div class="line">System.out.println(<span class="string">"教师类"</span>);</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test3</span> </span>&#123;</div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">Person s = <span class="keyword">new</span> Students();</div><div class="line">Person t = <span class="keyword">new</span> Teacher();</div><div class="line">s.f();</div><div class="line">t.f();</div><div class="line">&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p> 抽象类的多态程序：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">f</span><span class="params">()</span></span>;</div><div class="line">&#125;</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Students</span> <span class="keyword">extends</span> <span class="title">Person</span> </span>&#123;</div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">f</span><span class="params">()</span> </span>&#123;</div><div class="line">System.out.println(<span class="string">"学生类"</span>);</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Teacher</span> <span class="keyword">extends</span> <span class="title">Person</span> </span>&#123;</div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">f</span><span class="params">()</span> </span>&#123;</div><div class="line">System.out.println(<span class="string">"教师类"</span>);</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test3</span> </span>&#123;</div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">Person s = <span class="keyword">new</span> Students();</div><div class="line">Person t = <span class="keyword">new</span> Teacher();</div><div class="line">s.f();</div><div class="line">t.f();</div><div class="line">&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 </ol>
-<p>上面的这个抽象方法不需要实现功能，而一般的方法 ：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">enjoy</span><span class="params">()</span> </span>&#123;</div><div class="line">System.out.print(<span class="string">"叫声"</span>); <span class="comment">//有必要实现某些功能</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>例子 ：多态程序，没抽象类的<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">f</span><span class="params">()</span> </span>&#123;</div><div class="line">System.out.println(<span class="string">"父类"</span>);</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Students</span> <span class="keyword">extends</span> <span class="title">Person</span> </span>&#123;</div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">f</span><span class="params">()</span> </span>&#123;</div><div class="line">System.out.println(<span class="string">"学生类"</span>);</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Teacher</span> <span class="keyword">extends</span> <span class="title">Person</span> </span>&#123;</div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">f</span><span class="params">()</span> </span>&#123;</div><div class="line">System.out.println(<span class="string">"教师类"</span>);</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test3</span> </span>&#123;</div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">Person s = <span class="keyword">new</span> Students();</div><div class="line">Person t = <span class="keyword">new</span> Teacher();</div><div class="line">s.f();</div><div class="line">t.f();</div><div class="line">&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>抽象类的多态程序：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">f</span><span class="params">()</span></span>;</div><div class="line">&#125;</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Students</span> <span class="keyword">extends</span> <span class="title">Person</span> </span>&#123;</div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">f</span><span class="params">()</span> </span>&#123;</div><div class="line">System.out.println(<span class="string">"学生类"</span>);</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Teacher</span> <span class="keyword">extends</span> <span class="title">Person</span> </span>&#123;</div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">f</span><span class="params">()</span> </span>&#123;</div><div class="line">System.out.println(<span class="string">"教师类"</span>);</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test3</span> </span>&#123;</div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">Person s = <span class="keyword">new</span> Students();</div><div class="line">Person t = <span class="keyword">new</span> Teacher();</div><div class="line">s.f();</div><div class="line">t.f();</div><div class="line">&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -398,10 +401,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Daftar Isi
+            Table of Contents
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            Ikhtisar
+            Overview
           </li>
         </ul>
       
@@ -418,7 +421,7 @@
           <div class="site-state-item site-state-posts">
             <a href="/archives">
               <span class="site-state-item-count">2</span>
-              <span class="site-state-item-name">posting</span>
+              <span class="site-state-item-name">posts</span>
             </a>
           </div>
 
@@ -476,7 +479,7 @@
               
             
             
-              <p class="post-toc-empty">Posting ini tidak memiliki Daftar Isi</p>
+              <p class="post-toc-empty">This post does not have a Table of Contents</p>
             
           </div>
         </section>
@@ -507,7 +510,7 @@
 </div>
 
 <div class="theme-info">
-  Tema -
+  Theme -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Mist
   </a>
